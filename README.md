@@ -4,3 +4,6 @@
 
 - A language empowering everyone to build reliable and efficient software.
 - 3P is Performance, Reliability, Productivity
+
+# rust magazine
+[Rust-Magazine](https://rustmagazine.org)
