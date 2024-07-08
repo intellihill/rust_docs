@@ -12,4 +12,7 @@ fn main() {
         .expect("Failed to read line");
 
     println!("You guessed: {}", guess);
+
+    let apples = 5; // immutable
+    let mut bananas = 5; // mutable 
 }
