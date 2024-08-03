@@ -12,6 +12,9 @@ fn main() {
     let my_number = 8;
     prints_number(my_number);
     prints_number(my_number);
+
+    uninitialized()
+
 }
 
 // & immutable reference / shared reference
@@ -51,4 +54,28 @@ fn add_is_great(country_name: &mut String) {
 
 fn prints_number(number: i32) {
     println!("{}", number);
+}
+
+// uninitialized variable
+// control flow
+
+fn uninitialized() {
+    // possibly uninitialized = maybe doesn't have a value yet
+    // let my_number: u8;
+    let my_number = {
+        // 복잡한 것들
+        let x = loop_then_return(x);
+        my_number = x
+    }
+    println!("{}", my_number);
+}
+
+fn loop_then_return(mut counter: i32) -> i32 {
+    loop {
+        counter += 1;
+        if counter % 50 == 0 {
+            break;
+        }
+    }
+    counter
 }
